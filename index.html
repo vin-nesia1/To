@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIN NESIA TOOLS</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.0/beautify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="js/script.js" defer></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F8V8Y4XQN4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-F8V8Y4XQN4');
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo" class="logo-img">
+            <h1><a href="index.html">VIN NESIA TOOLS</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="terms.html">Terms</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="history.html">History</a></li>
+            </ul>
+        </nav>
+        <button class="theme-toggle"><i class="fas fa-moon"></i></button>
+    </header>
+    <main>
+        <div class="tool-section">
+            <!-- Text Converter -->
+            <div class="tool">
+                <h3><i class="fas fa-text-height"></i> Text Converter <span class="tooltip" aria-label="Convert text to uppercase or lowercase"></span></h3>
+                <textarea id="text-input" placeholder="Enter text here..."></textarea>
+                <div class="button-group">
+                    <button id="text-uppercase">To Uppercase</button>
+                    <button id="text-lowercase">To Lowercase</button>
+                    <button id="text-copy">Copy</button>
+                    <button id="text-clear">Clear</button>
+                </div>
+                <textarea id="text-output" placeholder="Result will appear here..." readonly></textarea>
+                <div id="text-error" class="error-message"></div>
+                <div id="text-loading" class="loading"></div>
+            </div>
+
+            <!-- Base64 Encoder/Decoder -->
+            <div class="tool">
+                <h3><i class="fas fa-lock"></i> Base64 Encoder/Decoder <span class="tooltip" aria-label="Encode or decode text to/from Base64"></span></h3>
+                <textarea id="base64-input" placeholder="Enter text or Base64 string..."></textarea>
+                <div class="button-group">
+                    <button id="base64-encode">Encode</button>
+                    <button id="base64-decode">Decode</button>
+                    <button id="base64-copy">Copy</button>
+                    <button id="base64-clear">Clear</button>
+                </div>
+                <textarea id="base64-output" placeholder="Result will appear here..." readonly></textarea>
+                <div id="base64-error" class="error-message"></div>
+                <div id="base64-loading" class="loading"></div>
+            </div>
+
+            <!-- URL Encoder/Decoder -->
+            <div class="tool">
+                <h3><i class="fas fa-link"></i> URL Encoder/Decoder <span class="tooltip" aria-label="Encode or decode URL components"></span></h3>
+                <textarea id="url-input" placeholder="Enter URL or encoded text..."></textarea>
+                <div class="button-group">
+                    <button id="url-encode">Encode</button>
+                    <button id="url-decode">Decode</button>
+                    <button id="url-copy">Copy</button>
+                    <button id="url-clear">Clear</button>
+                </div>
+                <textarea id="url-output" placeholder="Result will appear here..." readonly></textarea>
+                <div id="url-error" class="error-message"></div>
+                <div id="url-loading" class="loading"></div>
+            </div>
+
+            <!-- JSON Formatter -->
+            <div class="tool">
+                <h3><i class="fas fa-code"></i> JSON Formatter <span class="tooltip" aria-label="Format JSON string with proper indentation"></span></h3>
+                <textarea id="json-input" placeholder="Enter JSON string..."></textarea>
+                <div class="button-group">
+                    <button id="json-format">Format</button>
+                    <button id="json-copy">Copy</button>
+                    <button id="json-clear">Clear</button>
+                </div>
+                <textarea id="json-output" placeholder="Formatted JSON will appear here..." readonly></textarea>
+                <div id="json-error" class="error-message"></div>
+                <div id="json-loading" class="loading"></div>
+            </div>
+
+            <!-- CSV to JSON Converter -->
+            <div class="tool">
+                <h3><i class="fas fa-table"></i> CSV to JSON Converter <span class="tooltip" aria-label="Convert CSV to JSON format"></span></h3>
+                <textarea id="csv-input" placeholder="Enter CSV data..."></textarea>
+                <div class="button-group">
+                    <button id="csv-convert">Convert</button>
+                    <button id="csv-copy">Copy</button>
+                    <button id="csv-clear">Clear</button>
+                </div>
+                <textarea id="csv-output" placeholder="JSON result will appear here..." readonly></textarea>
+                <div id="csv-error" class="error-message"></div>
+                <div id="csv-loading" class="loading"></div>
+            </div>
+
+            <!-- HTML Minifier/Beautifier -->
+            <div class="tool">
+                <h3><i class="fas fa-code"></i> HTML Minifier/Beautifier <span class="tooltip" aria-label="Minify or beautify HTML code"></span></h3>
+                <textarea id="html-input" placeholder="Enter HTML code..."></textarea>
+                <div class="button-group">
+                    <button id="html-minify">Minify</button>
+                    <button id="html-beautify">Beautify</button>
+                    <button id="html-copy">Copy</button>
+                    <button id="html-clear">Clear</button>
+                </div>
+                <textarea id="html-output" placeholder="Result will appear here..." readonly></textarea>
+                <div id="html-error" class="error-message"></div>
+                <div id="html-loading" class="loading"></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 VIN NESIA TOOLS | <a href="https://twitter.com/vinnesia">Twitter</a> | <a href="https://github.com/vinnesia">GitHub</a></p>
+    </footer>
+</body>
+</html>
